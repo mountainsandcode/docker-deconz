@@ -32,6 +32,8 @@ RUN apt-get update && \
         libqt5sql5 \
         libqt5websockets5 \
         libqt5widgets5 \
+        usbutils \
+        sysutils \
         lsof \
         sqlite3 \
         tigervnc-standalone-server \
