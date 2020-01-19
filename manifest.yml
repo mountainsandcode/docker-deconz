@@ -5,14 +5,3 @@ manifests:
     platform:
       architecture: amd64
       os: linux
-  -
-    image: marthoc/deconz:armhf
-    platform:
-      architecture: arm
-      variant: armv7l
-      os: linux
-  -
-    image: marthoc/deconz:aarch64
-    platform:
-      architecture: arm64
-      os: linux
