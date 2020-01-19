@@ -8,10 +8,10 @@ ENV TINI_VERSION=0.18.0 \
 ENV DECONZ_WEB_PORT=80 \
     DECONZ_WS_PORT=443 \
     DEBUG_INFO=1 \
-    DEBUG_APS=0 \
-    DEBUG_ZCL=0 \
-    DEBUG_ZDP=0 \
-    DEBUG_OTAU=0 \
+    DEBUG_APS=1 \
+    DEBUG_ZCL=1 \
+    DEBUG_ZDP=1 \
+    DEBUG_OTAU=1 \
     DECONZ_DEVICE=0 \
     DECONZ_VNC_MODE=0 \
     DECONZ_VNC_DISPLAY=0 \
@@ -33,16 +33,14 @@ RUN apt-get update && \
         libqt5websockets5 \
         libqt5widgets5 \
         usbutils \
-        sysutils \
+        procinfo \
         lsof \
         sqlite3 \
         tigervnc-standalone-server \
         tigervnc-common \
         wmii \
         xfonts-base \
-        xfonts-scalable && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+        xfonts-scalable
 
 # Add tini, start.sh, and Conbee udev data; set execute permissions
 ADD https://github.com/krallin/tini/releases/download/v${TINI_VERSION}/tini /tini
